@@ -66,7 +66,7 @@ export const quiz = createSlice({
   name: 'quiz',
   initialState,
   reducers: {
-    
+
     /**
     * Use this action when a user selects an answer to the question.
     * The answer will be stored in the `quiz.answers` state with the
@@ -85,15 +85,15 @@ export const quiz = createSlice({
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload
       const question = state.questions.find((q) => q.id === questionId)
-      
+
       if (!question) {
         throw new Error('Could not find question! Check to make sure you are passing the question id correctly.')
       }
-      
+
       if (question.options[answerIndex] === undefined) {
         throw new Error(`You passed answerIndex ${answerIndex}, but it is not in the possible answers array!`)
       }
-      
+
       state.answers.push({
         questionId,
         answerIndex,
@@ -102,7 +102,7 @@ export const quiz = createSlice({
         isCorrect: question.correctAnswerIndex === answerIndex
       })
     },
-    
+
     /**
     * Use this action to progress the quiz to the next question. If there's
     * no more questions (the user was on the final question), set `quizOver`
@@ -117,7 +117,7 @@ export const quiz = createSlice({
         state.currentQuesionIndex += 1
       }
     },
-    
+
     /**
     * Use this action to reset the state to the initial state the page had
     * when it was loaded. Who doesn't like re-doing a quiz when you know the
@@ -128,6 +128,6 @@ export const quiz = createSlice({
     restart: () => {
       return initialState
     }
-    
+
   }
 })
