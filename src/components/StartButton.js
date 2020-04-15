@@ -14,6 +14,7 @@ export const StartButton = () => {
   return (
     <button
       onClick={handleClick}
+      className="moveOn"
       type="button">
       Start quiz
     </button>

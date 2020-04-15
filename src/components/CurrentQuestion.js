@@ -31,7 +31,7 @@ export const CurrentQuestion = () => {
     {question.options.map((answer, index) => {
       return (
         
-        <button className="answerOption" 
+        <button className={hasAnswer && index === question.correctAnswerIndex ? 'answerOption green' : "answerOption"}
         key={index}
         disabled={hasAnswer}
         onClick={() => handleClick(index)}>
