@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const questions = [
   {
     id: 1,
-    image: '/assets/giraffe_01.jpg',
+    image: './assets/giraffe_01.jpg',
     questionText: 'How many species of giraffe are there?',
     options: ['one',
       'five',
@@ -14,7 +14,7 @@ const questions = [
   },
   {
     id: 2,
-    image: '/assets/giraffe_04.jpg',
+    image: './assets/giraffe_04.jpg',
     questionText: 'Where do giraffes live?',
     options: ['South America',
       'Asia',
@@ -24,7 +24,7 @@ const questions = [
   },
   {
     id: 3,
-    image: '/assets/giraffe_03.jpg',
+    image: './assets/giraffe_03.jpg',
     questionText: 'What kind of terrain do giraffes prefer?',
     options: ['rocky slopes',
       'dense forests',
@@ -34,7 +34,7 @@ const questions = [
   },
   {
     id: 4,
-    image: '/assets/girrafe_05.jpg',
+    image: './assets/giraffe_05.jpg',
     questionText: "How long is the giraffe's neck?",
     options: ['2.1 m',
       '2.4 m',
@@ -44,7 +44,7 @@ const questions = [
   },
   {
     id: 5,
-    image: '/assets/giraffe_02.jpg',
+    image: './assets/giraffe_02.jpg',
     questionText: "Just how long is the giraffe's tongue?",
     options: ['38 cm',
       '53 cm',
