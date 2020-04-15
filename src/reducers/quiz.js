@@ -60,8 +60,7 @@ const initialState = {
   answers: [],
   currentQuesionIndex: 0,
   quizOver: false,
-  quizStarted: false,
-  hasAnswer: false
+  quizStarted: false
 }
 
 export const quiz = createSlice({
@@ -134,11 +133,6 @@ export const quiz = createSlice({
     startQuiz: (state) => {
       state.quizStarted = true
     },
-
-    hasAnswer: (state) => {
-      state.hasAnswer = true
-    }
-
     
   }
 })
