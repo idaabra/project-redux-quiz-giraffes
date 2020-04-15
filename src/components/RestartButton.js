@@ -2,12 +2,12 @@ import React from 'react';
 import { useDispatch } from 'react-redux'
 import { quiz } from '../reducers/quiz'
 
-export const StartButton = () => {
+export const RestartButton = () => {
   const dispatch = useDispatch()
 
   const handleClick = () => {
     return (
-      dispatch(quiz.actions.startQuiz())
+      dispatch(quiz.actions.restart())
     )
   }
 
@@ -15,7 +15,7 @@ export const StartButton = () => {
     <button
       onClick={handleClick}
       type="button">
-      Start quiz
+      Try again
     </button>
   )
 }
