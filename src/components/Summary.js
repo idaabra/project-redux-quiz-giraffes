@@ -1,10 +1,12 @@
 import React from 'react'
+import { Score } from 'components/Score'
+import { RestartButton } from 'components/RestartButton'
 
 export const Summary = () => {
   return (
     <div>
-      <h1>summery here</h1>
+      <Score />
+      <RestartButton />
     </div>
   )
 }
-
