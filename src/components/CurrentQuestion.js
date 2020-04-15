@@ -1,11 +1,12 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { quiz } from 'reducers/quiz'
+import { Progress } from './Progress'
 
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuesionIndex])
   const dispatch = useDispatch()
-  
+
 
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>
@@ -17,14 +18,9 @@ export const CurrentQuestion = () => {
 
   return (
     <main>
-
       <img src={question.image} alt="Giraffe" />
-
       <h1>Question: {question.questionText}</h1>
-
       {question.options.map((answer, index) => {
-
-
         return (
           <button key={index}
             onClick={() => handleClick(index)}>
@@ -34,9 +30,12 @@ export const CurrentQuestion = () => {
       })}
       <button onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
         NEXT
-        </button>
-        </main>)}
-        
+      </button>
+      <Progress/>
+    </main>
+  )
+}
+
 
 
 
