@@ -5,14 +5,8 @@ import { StartingPage } from 'components/StartingPage'
 import { Summary } from 'components/Summary'
 
 export const QuizContent = () => {
-  const quizOver = useSelector((state) => state.quiz.quizOver)
-
   const isStarted = useSelector((state) => state.quiz.quizStarted)
   const isOver = useSelector((state) => state.quiz.quizOver)
-
-  // startingpage
-  // current q
-  // summary
 
   if (!isStarted && !isOver) {
     return (
